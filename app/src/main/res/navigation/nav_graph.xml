@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/optionPage"
+        android:name="com.example.blooddonationapp.OptionPage"
+        android:label="fragment_option_page"
+        tools:layout="@layout/fragment_option_page" >
+        <action
+            android:id="@+id/action_optionPage_to_donorDetails"
+            app:destination="@id/donorDetails" />
+        <action
+            android:id="@+id/action_optionPage_to_listOfDonors"
+            app:destination="@id/listOfDonors" />
+    </fragment>
+    <fragment
+        android:id="@+id/donorDetails"
+        android:name="com.example.blooddonationapp.DonorDetails"
+        android:label="fragment_donor_details"
+        tools:layout="@layout/fragment_donor_details" >
+        <action
+            android:id="@+id/action_donorDetails_to_donorThankyou"
+            app:destination="@id/donorThankyou" />
+    </fragment>
+    <fragment
+        android:id="@+id/listOfDonors"
+        android:name="com.example.blooddonationapp.ListOfDonors"
+        android:label="fragment_list_of_donors"
+        tools:layout="@layout/fragment_list_of_donors" >
+        <action
+            android:id="@+id/action_listOfDonors_to_customer_details"
+            app:destination="@id/customer_details" />
+    </fragment>
+    <fragment
+        android:id="@+id/customer_details"
+        android:name="com.example.blooddonationapp.customer_details"
+        android:label="fragment_customer_details"
+        tools:layout="@layout/fragment_customer_details" >
+        <action
+            android:id="@+id/action_customer_details_to_checkout_page"
+            app:destination="@id/checkout_page" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkout_page"
+        android:name="com.example.blooddonationapp.checkout_page"
+        android:label="fragment_checkout_page"
+        tools:layout="@layout/fragment_checkout_page" >
+        <action
+            android:id="@+id/action_checkout_page_to_thankyou"
+            app:destination="@id/thankyou" />
+    </fragment>
+    <fragment
+        android:id="@+id/thankyou"
+        android:name="com.example.blooddonationapp.thankyou"
+        android:label="fragment_thankyou"
+        tools:layout="@layout/fragment_thankyou" />
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="com.example.blooddonationapp.splashScreen"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreen_to_login_screen"
+            app:destination="@id/login_screen" />
+    </fragment>
+    <fragment
+        android:id="@+id/login_screen"
+        android:name="com.example.blooddonationapp.login_screen"
+        android:label="fragment_login_screen"
+        tools:layout="@layout/fragment_login_screen" >
+        <action
+            android:id="@+id/action_login_screen_to_existin_Login"
+            app:destination="@id/existin_Login" />
+        <action
+            android:id="@+id/action_login_screen_to_optionPage"
+            app:destination="@id/optionPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/existin_Login"
+        android:name="com.example.blooddonationapp.existin_Login"
+        android:label="fragment_existin__login"
+        tools:layout="@layout/fragment_existin__login" >
+        <action
+            android:id="@+id/action_existin_Login_to_login_screen"
+            app:destination="@id/login_screen" />
+    </fragment>
+    <fragment
+        android:id="@+id/donorThankyou"
+        android:name="com.example.blooddonationapp.donorThankyou"
+        android:label="fragment_donor_thankyou"
+        tools:layout="@layout/fragment_donor_thankyou" />
+</navigation>
