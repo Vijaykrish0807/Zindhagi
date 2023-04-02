@@ -9,5 +9,4 @@ Firebase Authentication,
 Firebase Firestore,
 Recycler View,
 Couroutines,
-Navigation Component,
-![image](https://user-images.githubusercontent.com/78889786/169534922-58666e2d-fb1b-486d-a5cf-3a786252d17f.png)
+Navigation Component
